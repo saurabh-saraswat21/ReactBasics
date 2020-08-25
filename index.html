@@ -29,6 +29,14 @@
         // Class name should start with capital letter
         class App extends React.Component {
 
+            // State property of component
+
+            state={
+                name:'Saurabh',
+                age: 30
+            }
+
+
             // render is the function all ReactCOmponent has inbuilt
             render() {
 
@@ -38,8 +46,9 @@
                     // a static html for demo
 
                     // Note:- return function can only have one main tag to be returned inside that unlimited tags are allowed 
-                    // 
+                     
                     <div className="app-container">
+
                         {/*Static html is also possible */}
                         <h1> First react app </h1>
 
@@ -47,7 +56,10 @@
 
                         {/* Dyamamic content inside curly braces*/}
                         <p>{Math.random}</p>
-
+                        
+                        {/* Use of state property*/}
+                        <p>My Name is :{ this.state.name}</p>
+ 
                     </div>
                     // NO MORE HTML TAGS ARE ALLOWED ALL THE RETURN MUST BE DONE INSIDE THE PREVIOUS TAG
 
