@@ -36,6 +36,11 @@
                 age: 30
             }
 
+            //function that handles cilck of button clickme
+            btnClick(e){
+                console.log("Button clicked")
+            }
+
 
             // render is the function all ReactCOmponent has inbuilt
             render() {
@@ -54,11 +59,15 @@
 
                         { /* Comments inside return are written like this*/}
 
-                        {/* Dyamamic content inside curly braces*/}
-                        <p>{Math.random}</p>
+                        
                         
                         {/* Use of state property*/}
+
                         <p>My Name is :{ this.state.name}</p>
+                        {/* Dyamamic content inside curly braces*/}
+
+                        {/*Button with onclick event listener*/}
+                        <button onClick={this.btnClick} >ClickME </button>
  
                     </div>
                     // NO MORE HTML TAGS ARE ALLOWED ALL THE RETURN MUST BE DONE INSIDE THE PREVIOUS TAG
