@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Babel script so that it can transform the jsx into brower readable format -->
+   
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+   
+    <!-- Dyanamically using react instead of actually downloading it -->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <title>First React App</title>
+</head>
+
+<body>
+
+    <!-- our simple html DOM in which we are going to render dyanamic Content through React    -->
+    <div id="app"></div>
+
+    
+    <!-- Script tag to load Dyanamic content to abaove div#App tag -->
+    <script type="text/babel">
+        //  Script type is babel so that babel can transform it
+
+        // A simple react Component  (in the form of a class) made by Object oriented javascript
+        // Class name should start with capital letter
+        class App extends React.Component {
+
+            // render is the function all ReactCOmponent has inbuilt
+            render() {
+
+                //the render function returns dyanamic html 
+                return (
+
+                    // a static html for demo
+
+                    // Note:- return function can only have one main tag to be returned inside that unlimited tags are allowed 
+                    // 
+                    <div className="app-container">
+                        {/*Static html is also possible */}
+                        <h1> First react app </h1>
+
+                        { /* Comments inside return are written like this*/}
+
+                        {/* Dyamamic content inside curly braces*/}
+                        <p>{Math.random}</p>
+
+                    </div>
+                    // NO MORE HTML TAGS ARE ALLOWED ALL THE RETURN MUST BE DONE INSIDE THE PREVIOUS TAG
+
+                )
+            } 
+        }
+
+        ReactDOM.render(<App/>,document.getElementById('app'))
+    </script>
+</body>
+
+</html>
