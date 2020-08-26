@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Babel script so that it can transform the jsx into brower readable format -->
-   
+
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-   
+
     <!-- Dyanamically using react instead of actually downloading it -->
     <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
@@ -20,7 +20,7 @@
     <!-- our simple html DOM in which we are going to render dyanamic Content through React    -->
     <div id="app"></div>
 
-    
+
     <!-- Script tag to load Dyanamic content to abaove div#App tag -->
     <script type="text/babel">
         //  Script type is babel so that babel can transform it
@@ -31,16 +31,24 @@
 
             // State property of component
 
-            state={
-                name:'Saurabh',
+            state = {
+                name: 'Saurabh',
                 age: 30
             }
 
             //function that handles cilck of button clickme
-            btnClick(e){
+
+            //the defination of  custom function is changed to arrow function so that we can use this keyword
+            btnClick = (e) => {
+
+
                 console.log("Button clicked")
             }
 
+            //handle hover event
+            hover = (e) => {
+                console.log("hover")
+            }
 
             // render is the function all ReactCOmponent has inbuilt
             render() {
@@ -51,7 +59,7 @@
                     // a static html for demo
 
                     // Note:- return function can only have one main tag to be returned inside that unlimited tags are allowed 
-                     
+
                     <div className="app-container">
 
                         {/*Static html is also possible */}
@@ -59,24 +67,24 @@
 
                         { /* Comments inside return are written like this*/}
 
-                        
-                        
+
+
                         {/* Use of state property*/}
 
-                        <p>My Name is :{ this.state.name}</p>
+                        <p>My Name is :{this.state.name}</p>
                         {/* Dyamamic content inside curly braces*/}
 
-                        {/*Button with onclick event listener*/}
-                        <button onClick={this.btnClick} >ClickME </button>
- 
+                        {/*Button with onclick  and hover event listener*/}
+                        <button onMouseOver={this.hover} onClick={this.btnClick} >ClickME </button>
+
                     </div>
                     // NO MORE HTML TAGS ARE ALLOWED ALL THE RETURN MUST BE DONE INSIDE THE PREVIOUS TAG
 
                 )
-            } 
+            }
         }
 
-        ReactDOM.render(<App/>,document.getElementById('app'))
+        ReactDOM.render(<App />, document.getElementById('app'))
     </script>
 </body>
 
