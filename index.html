@@ -20,6 +20,9 @@
     <!-- our simple html DOM in which we are going to render dyanamic Content through React    -->
     <div id="app"></div>
 
+<!-- form DOM in which our form will render -->
+    <div id = "form"></div>
+
 
     <!-- Script tag to load Dyanamic content to abaove div#App tag -->
     <script type="text/babel">
@@ -27,6 +30,9 @@
 
         // A simple react Component  (in the form of a class) made by Object oriented javascript
         // Class name should start with capital letter
+
+
+
         class App extends React.Component {
 
             // State property of component
@@ -66,6 +72,12 @@
                 )
             }
 
+            showForm = (e) => {
+                ReactDOM.render(<Form />,document.getElementById('form'))
+            }
+
+
+
 
             // render is the function all ReactCOmponent has inbuilt
             render() {
@@ -92,7 +104,10 @@
                         {/* Dyamamic content inside curly braces*/}
 
                         {/*Button with onclick  and hover event listener*/}
+
                         <button onMouseOver={this.hover} onClick={this.btnClick} >ClickME </button>
+
+                        <button onClick={this.showForm}>showForm</button>
 
                     </div>
                     // NO MORE HTML TAGS ARE ALLOWED ALL THE RETURN MUST BE DONE INSIDE THE PREVIOUS TAG
@@ -101,6 +116,37 @@
             }
         }
 
+
+        class Form extends React.Component {
+            state ={
+                name :"op"
+            }
+
+            update=(e)=>{
+                this.setState({
+                    name: e.target.value
+                })
+                console
+            }
+            submit=(e)=>{
+                e.preventDefault();
+            }
+
+            render() {
+                return (
+                    <div className="form-container">
+                    <h1>My name is {this.state.name}</h1>
+                        <form className="form">
+                            <input type="text" name="" placeholder="enter to change above values"  onChange={this.update} />
+                            <input type="submit" onClick={this.submit} placeholder="submit"/>
+
+                        </form> 
+
+                    </div>
+                )
+            }
+
+        }
         ReactDOM.render(<App />, document.getElementById('app'))
     </script>
 </body>
