@@ -43,12 +43,29 @@
 
 
                 console.log("Button clicked")
+
+                //changing state name when clicked
+                this.setState(
+                    {
+                        name: "saurabh "
+                    }
+                )
+
+
             }
 
             //handle hover event
             hover = (e) => {
                 console.log("hover")
+
+                //changing state name when
+                this.setState(
+                    {
+                        name: "shaurya "
+                    }
+                )
             }
+
 
             // render is the function all ReactCOmponent has inbuilt
             render() {
