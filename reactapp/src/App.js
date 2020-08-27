@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 // importing child components
 import Component2 from './Components/component2'
 import Component3 from './Components/component3'
+import Form from './Components/formComponent'
 
 class App extends Component {
   state = {
@@ -40,9 +41,14 @@ class App extends Component {
 
         </div>
 
+        <div className="child comp3">
+          <Form/>
+        </div>
+      
       </div>
     )
   };
 }
 
 export default App;
+ 
