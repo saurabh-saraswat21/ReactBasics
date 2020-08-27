@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.head{
+  border: 2px solid blue;
+}
+.contact-page{
+
+  border: 2px solid red;
+}
