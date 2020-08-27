@@ -12,19 +12,30 @@ code {
     monospace;
 }
 /* style for root class based component */
-.head{
+.App{
   border: 2px solid blue;
 }
+/* styling for the  heading in the root comp */
+.heading{
+  border: 2px solid indianred;
+}
 
-/* styling for nested class based component */
-.contact-page{
+/* styling for  first nested class based component2 */
+.Component2{
 
   border: 2px solid red;
 }
 
-/* Styling for function based component */
+/* Styling for  second nested function based component3 */
 
 .Component3{
-  margin-top:3px;
+  margin-top:10px;
   border: 2px solid rebeccapurple;
+  padding: 5px;
+}
+
+/* Styling for the iterated list of component3 */
+.mylist{
+  margin: 3px;
+  border: 2px solid green;
 }
