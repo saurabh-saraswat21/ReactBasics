@@ -10,7 +10,9 @@ const Component3 = ({list}) =>{
             // "key" is the unique attribute
             <div className="mylist" key = {item.id}>
 
-                <h1>{item.name}</h1>
+                <h2> name: {item.name}</h2>
+                <h2> price: {item.price}</h2>
+                
             </div>
         )
     })

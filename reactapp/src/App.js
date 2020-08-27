@@ -11,8 +11,8 @@ class App extends Component {
     // this is the list we are going to inject and display in the Contact component
     list: [
       //  each child in an array or iterator should have a unique attribute here in this case is id 
-      { name: 'List one', id: 1 },
-      { name: 'list two', id: 2 }
+      { name: 'item 1', price:30, id: 1 },
+      { name: 'item 2', price : 40,id: 2 }
 
     ]
 
