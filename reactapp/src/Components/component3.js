@@ -3,12 +3,13 @@ import React from 'react';
 const Component3 = ({list}) =>{
 
     //this  "map" method itereats list one by one storing in "item" and then store in "mylist" 
-
     const mylist = list.map(item =>{
 
         return(
+            
             // "key" is the unique attribute
             <div className="mylist" key = {item.id}>
+
                 <h1>{item.name}</h1>
             </div>
         )

@@ -3,8 +3,8 @@
 import React, { Component } from 'react';
 
 // importing child components
-import Component2 from './component2'
-import Component3 from './component3'
+import Component2 from './Components/component2'
+import Component3 from './Components/component3'
 
 class App extends Component {
   state = {
