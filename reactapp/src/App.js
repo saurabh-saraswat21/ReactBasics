@@ -12,8 +12,7 @@ class App extends Component {
     // this is the list we are going to inject and display in the Contact component
     list: [
       //  each child in an array or iterator should have a unique attribute here in this case is id 
-      { name: 'item 1', price:30, id: 1 },
-      { name: 'item 2', price : 40,id: 2 }
+     
 
     ]
 
@@ -26,6 +25,14 @@ addToList =(item)=>{
       list:lists
     }
   )
+}
+deleteFromList=(id)=>{
+  let list = this.state.list.filter( item =>{
+    return item.id !==id 
+  });
+  this.setState({
+    list:list
+  })
 }
   render() {
     return (
@@ -46,7 +53,7 @@ addToList =(item)=>{
         <div className="child comp2">
 
           {/* passing state of root component to be used in child component as props */}
-          <Component3 list={this.state.list} />
+          <Component3 deleteFromList={this.deleteFromList} list={this.state.list} />
 
         </div>
 
