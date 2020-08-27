@@ -18,6 +18,15 @@ class App extends Component {
     ]
 
   }
+addToList =(item)=>{
+  item.id=Math.random();
+  let lists =[...this.state.list,item];
+  this.setState(
+    {
+      list:lists
+    }
+  )
+}
   render() {
     return (
       <div className="App">
@@ -42,7 +51,7 @@ class App extends Component {
         </div>
 
         <div className="child comp3">
-          <Form/>
+          <Form addToList={this.addToList}/>
         </div>
       
       </div>
