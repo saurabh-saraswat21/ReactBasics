@@ -11,10 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* style for root class based component */
 .head{
   border: 2px solid blue;
 }
+
+/* styling for nested class based component */
 .contact-page{
 
   border: 2px solid red;
+}
+
+/* Styling for function based component */
+
+.Component3{
+  margin-top:3px;
+  border: 2px solid rebeccapurple;
 }
