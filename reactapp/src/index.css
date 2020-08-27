@@ -20,15 +20,16 @@ code {
   border: 2px solid indianred;
 }
 
-/* styling for  first nested class based component2 */
-.Component2{
+/* styling for  first nested class based component */
+.child.comp1{
 
   border: 2px solid red;
 }
 
-/* Styling for  second nested function based component3 */
+/* Styling for  second nested function based component */
 
 .Component3{
+  /* display: inline-block; */
   margin-top:10px;
   border: 2px solid rebeccapurple;
   padding: 5px;
@@ -36,6 +37,14 @@ code {
 
 /* Styling for the iterated list of component3 */
 .mylist{
+  display: inline-block;
   margin: 3px;
   border: 2px solid green;
+}
+
+/* Styling for form component i.e., the 3 child component */
+.child.comp3{
+  border: 2px solid blue;
+  margin: 15px;
+  padding: 5px;
 }
